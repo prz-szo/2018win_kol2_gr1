@@ -18,3 +18,19 @@
 #Your program must be runnable with command "python task.py".
 #Show some usecases of your library in the code (print some things)
 #Good Luck
+
+from Bank import Bank
+from Client import Client
+
+bank = Bank()
+jan_kowalski = Client("Jan", "Kowalski")
+
+bank.add_client(jan_kowalski)
+bank.input(jan_kowalski, 1000)
+print(bank.get_info_about_client(jan_kowalski))
+
+bank.withdraw(jan_kowalski, 100)
+print(bank.get_info_about_client(jan_kowalski))
+
+bank.withdraw(jan_kowalski, 1000)
+print(bank.get_info_about_client(jan_kowalski))
